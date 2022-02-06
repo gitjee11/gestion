@@ -4,12 +4,14 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import fr.formation.inti.dao.EmployeeDao;
 import fr.formation.inti.dao.IEmployeeDao;
 import fr.formation.inti.entity.Employee;
 
 @Service
+@Transactional
 public class EmployeeService implements IEmployeeService{
 	
 	@Autowired
@@ -45,9 +47,7 @@ public class EmployeeService implements IEmployeeService{
 
 	@Override
 	public List<Employee> findAll() {
-		dao.beginTransaction();
 		List<Employee> list = dao.findAll();
-		dao.commitTransaction();
 		return list;
 	}
 
