@@ -77,8 +77,47 @@
 			<artifactId>jaxb-runtime</artifactId>
 			<version>2.3.2</version>
 		</dependency>
+		
+		 <!-- JSP API -->
+        <!-- http://mvnrepository.com/artifact/javax.servlet.jsp/jsp-api -->
+        <dependency>
+            <groupId>javax.servlet.jsp</groupId>
+            <artifactId>jsp-api</artifactId>
+            <version>2.2</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <!-- http://mvnrepository.com/artifact/org.apache.struts/struts2-core -->
+        <dependency>
+            <groupId>org.apache.struts</groupId>
+            <artifactId>struts2-core</artifactId>
+            <version>2.3.20</version>
+        </dependency>
+        <!-- http://mvnrepository.com/artifact/org.apache.struts/struts2-convention-plugin -->
+        <dependency>
+            <groupId>org.apache.struts</groupId>
+            <artifactId>struts2-convention-plugin</artifactId>
+            <version>2.3.20</version>
+        </dependency>
 	</dependencies>
 	<build>
 		<finalName>gestionExample</finalName>
+		<plugins>
+
+            <!-- Config: Maven Tomcat Plugin -->
+            <!-- http://mvnrepository.com/artifact/org.apache.tomcat.maven/tomcat7-maven-plugin -->
+            <plugin>
+                <groupId>org.apache.tomcat.maven</groupId>
+                <artifactId>tomcat7-maven-plugin</artifactId>
+                <version>2.2</version>
+                <!-- Config: contextPath and Port (Default: /Struts2XML : 8080) -->
+                <!--
+                <configuration>
+                  <path>/</path>
+                  <port>8899</port>
+                </configuration>
+                -->
+            </plugin>
+        </plugins>
 	</build>
 </project>

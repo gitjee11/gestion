@@ -8,6 +8,6 @@
 <title>Hello Struts 2 !</title>
 </head>
 <body>
-	<h1><a href="<s:url action='hello'/>">Hello Struts 2</a></h1>
+	<h2><s:property value="messageStore.message"/></h2>
 </body>
 </html>
