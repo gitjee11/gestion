@@ -65,14 +65,14 @@
 			<artifactId>hibernate-core</artifactId>
 			<version>5.3.7.Final</version>
 		</dependency>
-		
+
 		<!-- Runtime, com.sun.xml.bind module -->
 		<dependency>
 			<groupId>org.glassfish.jaxb</groupId>
 			<artifactId>jaxb-runtime</artifactId>
 			<version>2.3.2</version>
 		</dependency>
-		
+
 
 		<!-- Spring Core -->
 		<!-- http://mvnrepository.com/artifact/org.springframework/spring-core -->
