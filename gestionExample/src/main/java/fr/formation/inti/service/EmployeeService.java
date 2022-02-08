@@ -16,10 +16,16 @@ import fr.formation.inti.entity.Employee;
 public class EmployeeService implements IEmployeeService{
 	private final Log log = LogFactory.getLog(EmployeeService.class);
 	
-	@Autowired
+//	@Autowired
 	private IEmployeeDao dao;
 	
 	public EmployeeService() {
+		log.info("new EmployeeService()");
+	}
+	
+	@Autowired
+	public EmployeeService(IEmployeeDao dao) {
+		this.dao = dao;
 		log.info("new EmployeeService()");
 	}
 	
