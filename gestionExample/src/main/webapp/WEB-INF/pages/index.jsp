@@ -1,5 +1,6 @@
 <%@page import="java.util.Date" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core"  prefix="c"%>
+<%@taglib uri="http://www.springframework.org/tags" prefix="spring"%>
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -16,8 +17,14 @@
 
 <body>
 <div class="sidenav">
+		<div style="text-align: center;padding:5px 0;margin:0;">
+	       <a href="${url}?lang=en">Login (English)</a>
+	       &nbsp;&nbsp;
+	       <a href="${url}?lang=fr">Login (French)</a>
+	       
+	    </div>
          <div class="login-main-text">
-            <h2>Application<br> JAVA EE</h2>
+            <h2><spring:message    code="label.hello" /></h2>
             <p>Example Servlet.</p>
             <br>
             <%= new Date() %>

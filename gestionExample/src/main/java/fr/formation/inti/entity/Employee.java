@@ -29,6 +29,8 @@ public class Employee {
 	@Column(name = "start_date")
 	private Date startDate;
 	
+	private String title;
+	
 	@ManyToOne
 	@JoinColumn(name = "dept_id", nullable = false)
 	private Department department;
@@ -93,6 +95,16 @@ public class Employee {
 	}
 
 	
+
+	
+
+	public String getTitle() {
+		return title;
+	}
+
+	public void setTitle(String title) {
+		this.title = title;
+	}
 
 	public Department getDepartment() {
 		return department;
