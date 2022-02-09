@@ -47,7 +47,7 @@ public class Employee {
 //			addSubordonnees(e);
 //		}
 //	}
-//	
+//	test
 //	public void addSubordonnees(Employee e) {
 //		this.subordonnees.add(e);
 //		if (e.getManager() != this) {
